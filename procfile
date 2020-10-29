@@ -1,0 +1,1 @@
+web: gunicorn Infografica_dati_dropdown:server
