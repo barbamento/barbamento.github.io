@@ -51,44 +51,68 @@
 								<p>We have the best graphs, so many graphs, not even close.</p>
 							</header>
 							<header>
-								<h1>R0</h1>
-								<p>Il primo grafico ci mostra quanto è variatp l'R0 nazionale e quello regionale col passare del tempo.<br>
-									L'R0 è il “numero di riproduzione di base” che rappresenta il numero medio di infezioni secondarie prodotte da ciascun individuo infetto in una popolazione completamente 
-									suscettibile; per dirla in parole più semplici ci indica il numero medio di persone che un malato infetta prima di guarire. Proprio per questo motivo se R0 è maggiore di 1, 
-									ossia la malatia non scompare da sola, le misure governative per il contrasto alla sua diffusione si intensificano.<br>
-									E' importante distinguere l'R0 dall'Rt che è il numero di riproduzione netto, ossia Rt viene calcolato nel corso del tempo.<br>
-									Gli r0 regionali potete notare che hanno spike in momenti particolari. Questo è dato sia da incrementi improvvisi nel numero di contagiati sia da problemi riguardanti il tracing
-									degli asintomatici. 
+								<h1>Dati di oggi</h1>
+							</header>  
+								<p>In questa sezione verranno presentati, tramite grafici e mappe interattive, i dati odierni.<br>
+									Questi potranno essere in forma grezza, come il numero dei contagiati giornalieri, o semi lavorata, come la percentuale dei positivi rispetto al numero dei tamponi. Accanto
+									ad ogni mappa troverete anche delle brevi spiegazioni del perchè tale dato risulti importante.
 								</p>
-							</header>							
-							<iframe src="grafici\r0-lite.html" width="100%" height="600"></iframe>
+							<section class="tiles">
+								<article class="style1">
+									<header>
+										<h1>Nuovi Positivi</h1>
+									</header> 
+									<p>Il dato dei nuovi malati è probabilmente il dato più discusso in assoluto e tutti ci ricordiamo i bollettini di guerra che venivano ogni giorno diffusi in diretta nazionale durante la prima ondata.<br> 
+										La sua importanza però è molto relativa visto che, come ogni numero puro, va confrontata a qualcosa. Per esempio sarebbe più grave avere 100 nuovi casi a Milano o 30 nuovi casi ad Isernia?<br>
+										Per quanto in casi di valori molto elevati possa essere un campanello d'allarme, se preso da solo può far sembrare situazioni peggiori di quanto siano realmente, o per lo meno, dare informazioni con un forte bias.
+									</p>
+								</article>
+								<article class="style2">
+									<iframe src="grafici\new_cases_map.html" width="900" height="800"></iframe>
+								</article>
+							</section>
+							<section class="tiles">
+								<article class="style2">
+									<iframe src="grafici\perc_tamp_map.html" width="900" height="800"></iframe>
+								</article>
+								<article>
+								</article>
+								<article class="style1">
+									<header>
+										<h1>Percentuale Positivi/Tamponi</h1>
+									</header> 
+									<p>Questa percentuale è estremamente importante perchè ci dà un'idea di quanto il virus sia diffuso nelle singole regioni (e di conseguenza nello stato).<br> 
+										Uno dei limiti che non dovrebbe mai essere superato è il 5%, oltre il quale il tracing dei nuovi casi fa fatica a stare dietro ai nuovi contagi.<br>
+										Purtroppo questo dato è molto "sporco" visto che compaiono sia i tamponi fatti più volte alla stessa persona, che quelli fatti per determinare se il paziente è ancora positivo. 
+									</p>
+								</article>
+							</section>
 							<header>
-								<h1>Situazione generale da inizio pandemia</h1>
-								<p>In questa sezione vengono riportati i valori dei malati e delle terapie intesive a livello nazionale e regionale dal 24 febbraio 2020. Questa data è semplicemente il primo giorno
-									in cui sono stati pubblicati i dati del covid. Sin dal primo dpcm sono stati resi <a href="https://github.com/pcm-dpc/COVID-19">pubblici</a> dall'ISS i dati che noi utilizziamo.<br>
-								</p>
-							</header> 
-							<iframe src="grafici\confronto_nuovi_terapie-lite.html" width="100%" height="600"></iframe>
-							<iframe src="grafici\confronto_nuovi_terapie_regioni-lite.html" width="100%" height="600"></iframe> 
-							<header>
-								<h1>Dati giornalieri</h1>
+								<h1>Dati aggregati regionali</h1>
 							</header>
-							<iframe src="grafici\daily_regional_data-lite.html" width="100%" height="600"></iframe>
-							<h1>Parametri regionali per il futuro dpcm</h1>
-							<p>Non è ancora uscito il DPCM che deciderà le chiusure regionali ma noi abbiamo già preparato il grafichino che vi spiegherà come è messa la regione in cui risiedete<br>
+							<p>
+								Nel grafico sucessivo entrano in gioco tre differenti paramentrei che compaiono anche tra i criteri utilizzati dal governo per decidere se e come cambiare il colore delle regioni.<br> 
+								Il primo non necessità di alcuna spiegazione quindi mi limiterò ad un semplice appunto. Se le terapie intensive da covid superano il 66% dell'occupazione dei posti letto, tutti i sucessivi
+								malati occuperanno posti alle "emergenze ordinarie" come i feriti da incidenti o gli infarti.<br> 
+								L'incidenza dei casi sulla popolazione invece viene calcolata con la formula <sup>incremento positivi</sup>&frasl;<sub>popolazione</sub>. Questo parametro ci permette di capire quanto
+								la malatia sia diffusa in un dato territorio, e soprattutto quanto velocemente si stia diffondendo.<br> 
+								L'ultimo parametro è l'ormai celeberrimo R0, di cui tutti parlano, ma che in pochi realmente sanno cosa sia. Per una sua spiegazione rimando ad un approfondimento che uscirà a breve
+								riguardante R0, Rt, relative precisioni e soprattutto differenze.
 							</p>
-							</header>
-							<iframe src="grafici\dpcm-lite.html" width="100%" height="900"></iframe>
+							<iframe src="grafici\dpcm-lite.html" width="100%" height="1200"></iframe>
 							<h1>Parametri provinciali</h1>
-							<p>Nel caso vi steste chiedendo come le province si stiano comportando ecco che veniamo in aiuto per l'ennesima volta.<br>
-								Con questo intuitivo grafico potrete confrontare sia l'R0 che l'incremento dei delle province della rispettiva regione, sia l'incidenza di questi ultimi.<br>
+							<p>Come detto sopra le incidenze sono uno dei migliori strumenti per capire quanto il virus si stia diffondendo in una data zona.<br> 
+								Nel grafico sucessivo vengono rappresentate le crescite, provinciali e regionali, sia rispetto alla popolazione del territorio, sia rispetto al numero di malati già presenti nel territorio
+								la settimana precedente. A scopo comparativo vengono anche riportati accanto gli R0 e gli aumenti di positivi delle province della regione selezionata.
 							</p>
 							</header>
 							<iframe src="grafici\parametri_regioni-lite.html" width="100%" height="900"></iframe>
+							<p>Per tutti gli approfondimenti o i dati comulativi apri il menù a tendina in alto a destra. Tieni conto che il sito è ancora un WIP quindi ci saranno vari placeholder
+
+							</p>
 
 
-
-							<!-- <section class="tiles">
+							<!--<section class="tiles">
 								<article class="style1">
 									<span class="image">
 										<img src="images/pic01.jpg" alt="" />
